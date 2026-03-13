@@ -13,8 +13,15 @@ public class MaxNoArray {
             if(n[i]>max){
                 max=n[i];
             }
-        System.out.println(max);
-        sc.close();
         }
+        int min=n[0];
+        for(int i=1;i<n.length;i++){
+            if(n[i]<min){
+                min=n[i];
+            }
+        }
+        System.out.println("max: "+max);
+        System.out.println("min: "+min);
+        sc.close();
     }
 }
