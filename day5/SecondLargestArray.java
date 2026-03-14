@@ -1,7 +1,6 @@
 package day5;
-
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class SecondLargestArray {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
@@ -13,6 +12,7 @@ public class SecondLargestArray {
         int max=n[0];
         for(int i=1;i<n.length;i++){
             if(n[i]>max){
+                Arrays.sort(n);
                 max=n[i-1];
             }
         }
