@@ -7,9 +7,8 @@ public class ReverseArray {
         for(int i=0;i<n.length;i++){
             n[i]=sc.nextInt();
         }
-        System.out.println(n);
         for(int i=n.length-1;i>=0;i--){
-            System.out.println(n[i]);
+            System.out.print(n[i]);
         }
         sc.close();
     }
