@@ -1,22 +1,26 @@
 package day5;
 import java.util.Scanner;
-import java.util.Arrays;
 public class SecondLargestArray {
     public static void main(String[]args){
         Scanner sc=new Scanner(System.in);
         int[] n=new int[5];
         System.out.println("Enter a numbers: ");
         for(int i=0;i<n.length;i++){
-            n[i]=sc.nextInt();
+            n[i] = sc.nextInt();
         }
-        int max=n[0];
-        for(int i=1;i<n.length;i++){
-            if(n[i]>max){
-                Arrays.sort(n);
-                max=n[i-1];
+        int largest=n[0];
+        for(int i=0;i<n.length;i++){
+            if(n[i]>largest){
+                largest=n[i];
             }
         }
-        System.out.println("max: "+max);
+        int secmax=n[0];
+        for(int i=0;i<n.length;i++){
+            if(n[i]>secmax && n[i]!=largest){
+                secmax=n[i];
+            }
+        }
+        System.out.println("secmax: "+secmax);
         sc.close();
     }
     
